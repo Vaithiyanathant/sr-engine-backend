@@ -50,6 +50,36 @@ const Student = sequelize.define('Student', {
     }
   });
 
+
+  const Users = sequelize.define('Users', {
+    Name: {
+      type: DataTypes.STRING,
+    },
+    "Regn Num": {
+      type: DataTypes.STRING,
+    },
+    Branch: {
+      type: DataTypes.STRING,
+    },
+
+    Score: {
+      type: DataTypes.NUMBER,
+    },
+    Email: {
+      type: DataTypes.STRING,
+    },
+
+
+    "Batch/Section": {
+      type: DataTypes.STRING,
+    },
+    Batch: {
+      type: DataTypes.STRING,
+    },
+
+  });
+
+
 const Moderators  = sequelize.define('Moderators',{
     Name:{
         type:DataTypes.STRING
@@ -74,5 +104,6 @@ module.exports = {
   sequelize,
   Student,
   Moderators,
+  Users
   
 };

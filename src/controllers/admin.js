@@ -13,3 +13,11 @@ exports.PostTest = (req, res) => {
     }
   };
   
+exports.TopPerformers = (req,res)=>{
+    
+}
+
+exports.TestPerformance = (req,res)=>{
+    const {test_name} = req.body;
+    
+}
