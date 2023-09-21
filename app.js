@@ -11,8 +11,8 @@ const path = require('path');
 // })
 const { Sequelize, DataTypes } = require('sequelize');
 
-const sequelize = new Sequelize('srengine', 'root', '3030', {
-  host: 'localhost', // Replace with your database host.
+const sequelize = new Sequelize('nshades', 'admin', 'awspassword', {
+  host: 'nshades-db.cmmkohbr79bs.ap-southeast-2.rds.amazonaws.com', // Replace with your database host.
   dialect: 'mysql',
 });
 
@@ -81,7 +81,6 @@ const test= "textname";
 // Select the sheet you want to convert (e.g., the first sheet)
 const sheetName = workbook.SheetNames[0];
 const sheet = workbook.Sheets[sheetName];
-
 const jsonData = xlsx.utils.sheet_to_json(sheet);
 console.log("Inserting data")
  try {
