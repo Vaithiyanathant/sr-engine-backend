@@ -1,2 +1,21 @@
-login api = email,password
-TestDetailsApi = testname
+students:all details of  student
+
+present : codersfile details with test_name
+
+absent: absentfile details with test_name
+
+admin:admin user details
+test:questions
+
+logic
+
+test-name as parameter
+->res
+->
+present table ( where test_name=test-name) as present
+absent table (where test_name=test-name) as absent
+[present,absent]
+
+topers data
+
+students table (present ->updates -> Score [->10]  ->students table points )
