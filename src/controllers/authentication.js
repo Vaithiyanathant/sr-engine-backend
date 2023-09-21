@@ -66,11 +66,9 @@ exports.CreateModerator = async (req, res) => {
       Password: hashedPassword,
     });
 
-    const token = jwt.sign({ mentorId: newMentor.id }, 'your_secret_key', {
-      expiresIn: '1h', 
-    });
+    
 
-    res.status(201).json({ message: 'Mentor created successfully', token });
+    res.status(201).json({ message: 'Mentor created successfully' });
   } catch (error) {
     console.error('CreateMentor error:', error);
     res.status(500).json({ message: 'Internal server error' });
