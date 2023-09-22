@@ -49,6 +49,51 @@ const Student = sequelize.define('Student', {
       type: DataTypes.STRING,
     }
   });
+  const StudentAbsent = sequelize.define('StudentAbsent', {
+    Name: {
+      type: DataTypes.STRING,
+    },
+    "Regn Num": {
+      type: DataTypes.STRING,
+    },
+    Branch: {
+      type: DataTypes.STRING,
+    },
+    "Total Submissions": {
+      type: DataTypes.STRING,
+    },
+    "Solved Count": {
+      type: DataTypes.STRING,
+    },
+    Score: {
+      type: DataTypes.STRING,
+    },
+    Login: {
+      type: DataTypes.STRING,
+    },
+    Email: {
+      type: DataTypes.STRING,
+    },
+    Phone: {
+      type: DataTypes.STRING,
+    },
+    Mentor: {
+      type: DataTypes.STRING,
+    },
+    "Batch/Section": {
+      type: DataTypes.STRING,
+    },
+    Batch: {
+      type: DataTypes.STRING,
+    },
+    College: {
+      type: DataTypes.STRING,
+    },
+    TestName: {
+      type: DataTypes.STRING,
+    }
+  });
+
 
 
   const Users = sequelize.define('Users', {
@@ -104,6 +149,7 @@ module.exports = {
   sequelize,
   Student,
   Moderators,
+  StudentAbsent,
   Users
   
 };
