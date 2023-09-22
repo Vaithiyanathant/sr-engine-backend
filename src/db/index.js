@@ -49,6 +49,7 @@ const Student = sequelize.define('Student', {
       type: DataTypes.STRING,
     }
   });
+
   const StudentAbsent = sequelize.define('StudentAbsent', {
     Name: {
       type: DataTypes.STRING,
@@ -137,6 +138,20 @@ const Moderators  = sequelize.define('Moderators',{
     }
 
 })
+const Tests  = sequelize.define('Tests',{
+  Name:{
+      type:DataTypes.STRING
+  },
+  Url:{
+      type:DataTypes.STRING
+  },
+  Questions:{
+      type:DataTypes.JSON,
+      allowNull:true
+  }
+
+})
+
 sequelize.sync()
   .then(() => {
     console.log('Database and table have been synchronized.');
@@ -150,6 +165,7 @@ module.exports = {
   Student,
   Moderators,
   StudentAbsent,
-  Users
+  Users,
+  Tests,
   
 };
