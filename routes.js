@@ -21,5 +21,7 @@ router.post('/login',authentication.login)
 router.post('/change-password',authentication.changePassword)
 router.post('/create-admin',authentication.CreateModerator)
 router.post('/form-data', upload.fields([{ name: 'codersfile' }, { name: 'absentfile' }]), admin.PostTest);
+router.get('/all-test',admin.ALLTests)
+router.post('/test-results',admin.TestPerformance)
 
 module.exports = router

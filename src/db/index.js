@@ -39,6 +39,17 @@ const Student = sequelize.define('Student', {
     "Batch/Section": {
       type: DataTypes.STRING,
     },
+    "Resume Count":{
+      type:DataTypes.STRING
+    },
+    "Usage Time":{
+      type:DataTypes.STRING
+    },
+    "Active Utilization":
+    {
+      type:DataTypes.STRING
+    },  
+
     Batch: {
       type: DataTypes.STRING,
     },
